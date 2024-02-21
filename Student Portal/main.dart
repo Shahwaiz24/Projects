@@ -24,7 +24,7 @@ void main() {
 
   // Sign Up or Login Start //
 
-  print("If you are not Registered, please Type Signup, otherwise Log in.");
+  print("If you are not Registered, please Type Signup, otherwise Login.");
   String? forcheck = stdin.readLineSync();
   String forjoining =
       forcheck!.substring(0, 1).toUpperCase() + forcheck.substring(1);
@@ -36,14 +36,14 @@ void main() {
       if (!signUpSuccess) {
         print("User already exists. Please try again.");
       }
-    } while (!signUpSuccess);
+    } while (signUpSuccess == false);
     print("Did you Registered?, and Now you have to Login");
     login();
   } else if (forjoining == 'Login') {
     bool loginSuccess = false;
     do {
       loginSuccess = login();
-    } while (!loginSuccess);
+    } while (loginSuccess == false);
   }
 
   // Login Finished //
